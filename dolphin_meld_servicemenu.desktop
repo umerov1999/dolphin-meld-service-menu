@@ -11,7 +11,7 @@ X-KDE-submenu[ru]=Сравнить
 [Desktop Action meldCompareEachOther]
 Icon=document-preview
 Name=Compare each other (Meld)
-Name[]=Сравнивать с (Meld)
+Name[ru]=Сравнивать с (Meld)
 Exec=meld %U; rm /tmp/meld_file.tmp;
 
 [Desktop Action meldSaveForCompare]
