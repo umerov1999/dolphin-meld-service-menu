@@ -14,8 +14,14 @@ Name=Select for compare
 Name[ru]=Выберите для сравнения
 Exec=echo "%U" > /tmp/meld_file.tmp
 
+[Desktop Action meldCompareTo]
+Icon=dialog-ok-apply
+Name=Compare to select
+Name[ru]=Сравнить с выбранным
+Exec=meld `cat /tmp/meld_file.tmp` "%U"; rm /tmp/meld_file.tmp;
+
 [Desktop Action meldCompareEachOther]
 Icon=document-preview
 Name=Compare each other
-Name[ru]=Сравнивать с выбранным
+Name[ru]=Открыть для сравнения
 Exec=meld %U; rm /tmp/meld_file.tmp;
