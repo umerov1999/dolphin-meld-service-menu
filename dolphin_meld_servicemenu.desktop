@@ -5,23 +5,17 @@ MimeType=all/all;
 Actions=meldCompareEachOther;meldSaveForCompare;meldCompareTo;
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
-X-KDE-Submenu=Compare
-X-KDE-submenu[ru]=Сравнить
-
-[Desktop Action meldCompareEachOther]
-Icon=document-preview
-Name=Compare each other (Meld)
-Name[ru]=Сравнивать с (Meld)
-Exec=meld %U; rm /tmp/meld_file.tmp;
+X-KDE-Submenu=Meld Compare
+X-KDE-submenu[ru]=Meld Compare
 
 [Desktop Action meldSaveForCompare]
 Icon=bookmark-new
-Name=Select for compare (Meld)
-Name[ru]=Выберите для сравнения (Meld)
+Name=Select for compare
+Name[ru]=Выберите для сравнения
 Exec=echo "%U" > /tmp/meld_file.tmp
 
-[Desktop Action meldCompareTo]
-Icon=dialog-ok-apply
-Name=Compare (Meld)
-Name[ru]=Сравнить (Meld)
-Exec=meld `cat /tmp/meld_file.tmp` "%U"; rm /tmp/meld_file.tmp;
+[Desktop Action meldCompareEachOther]
+Icon=document-preview
+Name=Compare each other
+Name[ru]=Сравнивать с выбранным
+Exec=meld %U; rm /tmp/meld_file.tmp;
